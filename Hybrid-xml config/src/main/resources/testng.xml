@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" name="Test Automation Test Suite"
+	parallel="tests" verbose="3">
+
+	<!-- Start First Test -->
+	<test name="ExidePTE_POM on Chrome" parallel="methods" thread-count="5">
+	<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="MyTest.Logintest" />
+		</classes>
+	</test>
+	
+	<!-- End First Test -->
+	<test name="ExidePTE_POM on Firefox" parallel="methods" thread-count="5">
+	<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="MyTest.Logintest" />
+		</classes>
+	</test>
+</suite>
